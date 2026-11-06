@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Our Space",
+    "slug": "our-space",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Aplikasi ini membutuhkan akses kamera untuk mengirim momen foto secara instan.",
+        "NSPhotoLibraryUsageDescription": "Aplikasi ini membutuhkan akses galeri untuk memilih foto kenangan."
+      }
+    },
+    "android": {
+      "package": "com.pasangan.privatespace",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Izinkan aplikasi mengakses kamera untuk mengambil momen."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Izinkan aplikasi mengakses galeri foto Anda."
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "PartnerPhotoWidget",
+              "label": "Our Partner Photo",
+              "minWidth": "250dp",
+              "minHeight": "250dp",
+              "updatePeriodMillis": 1800000
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}
